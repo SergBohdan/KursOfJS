@@ -79,17 +79,219 @@
 // }
 // console.log(calculateAverage(1, 3, 5, "hello", 8));
 
-const user = {
-  name: "Igor",
-  car: "Mercedes",
-  carColor: "black",
+// const user = {
+//   name: "Igor",
+//   car: "Mercedes",
+//   carColor: "black",
+// };
+
+// function checkKeyInObject(obj, key) {
+//   //   return Object.keys(obj).includes(key);
+//   //   return obj.hasOwnProperty(key);
+//   for (const objKey in obj) {
+//     return objKey === key ? true : false;
+//   }
+// }
+// console.log(checkKeyInObject((user, "qwewrfaw")));
+
+
+// 6. Напишіть функцію sayHi(), яка приймає в якості параметра масив імен,
+// перебирає масив і додає до кожного ім'я привітання.
+// Функція повертає новий масив  ["Ivan привіт!", "Maria привіт!", "Anna привіт!"]
+
+
+  
+
+//   const friends = [
+//     { passport: '03005988', name: 'Joseph Francis Tribbiani Jr', age: 32, sex: 'm' },
+//     { passport: '03005989', name: 'Chandler Muriel Bing', age: 33, sex: 'm' },
+//     { passport: '03005990', name: 'Ross Eustace Geller', age: 33, sex: 'm' },
+//     { passport: '03005991', name: 'Rachel Karen Green', age: 31, sex: 'f' },
+//     { passport: '03005992', name: 'Monica Geller', age: 31, sex: 'f' },
+//     { passport: '03005993', name: 'Phoebe Buffay', age: 34, sex: 'f' }
+// ]
+// const getTotalBoysYears = arr => arr.filter(friend => friend.sex ==="m")  
+// .reduce((acc, friend) => acc + friend.age, 0);
+// console.log(getTotalBoysYears(friends));
+
+// const getGirlsPassports = arr => arr.filter(friend => friend.sex ==="f")  
+// .map((friend) => friend.passport);
+// console.log(getGirlsPassports(friends));
+
+
+// Є об'єкт і функція для підрахунку суми чисел.
+// Виведіть у консоль результат виконання функції, якщо a = 3, b = 5.
+
+// var obj = { num: 2 };
+
+// function add(a, b){
+//   return this.num + a + b;
+// }
+// console.log(add.call(obj, 3, 5))
+// // add.call(obj, a, b)
+// console.log(add.apply(obj, [3, 5]))
+// const funk = add.bind(obj, 3, 5)
+// console.log(funk())
+
+// Є два об'єкти, які описують деякі характеристики телефонів.
+// Потрібно викликати метод showInfo, щоб він логував інформацію про кожний телефон,
+// передаючи аргументом країну-виробник телефону.
+// "HUAWEI" - "China", "SAMSUNG" - "South Korea".
+
+// const tel = {
+//     regNumber: "AE8345FEDAS",
+//     brand: "HUAWEI", 
+//     showInfo(country) {
+//         console.log(`${country} ${this.regNumber} ${this.brand}`);
+//     }
+// }
+
+// const tel_2 = {
+//     regNumber: "AO8518FEGHT",
+//     brand: "SAMSUNG", 
+
+// }
+
+// tel.showInfo('china')
+// const bindedFoo = tel.showInfo.bind(tel_2, 'South Korea')
+// tel.showInfo.call(tel_2, 'South Korea')
+// tel.showInfo.apply(tel_2, ['South Korea'])
+
+// Напишіть код таким чином, щоб об'єкт apples став прототипом для об'єкта fuji.
+// Перевірте чи став об'єкт apples  прототипом для об'єкта fuji.
+// Додайте об'єкту fuji властивість color: 'pink'  і виведіть його у консоль.
+// Виведіть у консоль значення властивості type для об'єкту fuji.
+// Перевірте і виведіть у консоль чи є властивість vitamins власною властивістю об'єкту apples.
+// Перевірте і виведіть у консоль чи є властивість cookingMethod власною властивістю об'єкту fuji.
+
+// const apples = {
+//     type: 'fruit',
+//     cookingMethod: ['jam', 'juice', 'baked', 'dried', 'fresh'],
+//     vitamins: ['A', 'B1', 'B2', 'E'],
+// }
+
+// const fuji = Object.create(apples);
+// console.log(apples.isPrototypeOf(fuji));
+// fuji.color = 'pink';
+// console.log(fuji.color);
+// console.log(fuji.type);
+// console.log(apples.hasOwnProperty('vitamins'));
+// console.log(fuji.hasOwnProperty('cookingMethod'));
+
+// Напиши клас Rectangle який створює об'єкт
+//з ​​властивостями height, width
+//і методом calculateArea() для підрахунку прлощі прямокутника.
+
+// class Rectangle{
+
+//     constructor({heigth, width} = {}){
+//         this.heigth = heigth;
+//         this.width = width;
+//     }
+
+//     calculateArea(){
+//         return this.heigth*this.width
+//     }
+// }
+
+// const rectangle = new Rectangle({heigth: 4, width: 6 })
+
+// console.log(rectangle.calculateArea())
+
+//Напиши клас Client який створює об'єкт
+//з ​​властивостями login, email
+//Оголоси приватні властивості #login #email,
+//доступ до яких зроби через геттер та сеттер login email
+
+// class Client{
+//     #login;
+//     #email;
+//     constructor({login, email} = {}){
+//         this.#login = login;
+//         this.#email = email;
+//     }
+
+//     get login(){
+//         return this.#login
+//     }
+
+//     set login(newLogin){
+//         this.#login = newLogin;
+//     }
+
+//     get email(){
+//         return this.#email
+//     }
+
+//     set email(newemail){
+//         this.#email = newemail;
+//     }
+
+    
+
+// }
+// const newClient = new Client({login: 'user', email: 'user@mail.com'});
+
+// console.log(newClient.login);
+// newClient.login = 'root';
+// newClient.email = 'user@mail.com';
+// console.log(newClient.login);
+// console.log(newClient.email);
+
+
+// Створи клас Phone який створює об'єкт з ​​властивістю price.
+// Додай статичну властивість MAX_PRICE зі значенням 40000 - максимально допустима ціна телефону.
+// Оголоси приватну властивість price доступ до якої буде через геттер та сеттер.
+// Додай сетеру price перевірку значення параметра newPrice, що передається.Якщо воно більше за MAX_PRICE,
+// сеттер нічого не робить, а якщо менше або дорівнює, то перезаписує ціну телефону.
+
+// class Phone{
+
+//     static MAX_PRICE = 40000;
+//     #price;
+
+//     constructor({price} = {}){
+//         this.#price = price;
+//     }
+
+//     get price(){
+//         return this.#price
+//     }
+
+//     set price(newPrice){
+//         if(newPrice<= Phone.MAX_PRICE){
+//             this.#price = newPrice;
+//             return;
+//         }
+//     }
+// }
+
+// const newPhone = new Phone({price: 15000});
+// console.log(newPhone.price);
+// newPhone.price = 37000;
+// console.log(newPhone.price);
+// newPhone.price = 47000;
+// console.log(newPhone.price);
+
+// 1. Створіть об'єкт car з трьома властивостями
+// carBrand: "Audi Q3"
+// price: 23000
+// метод getData() котрий буде логувати рядок :"Audi Q3 за 23000 $"
+
+// 2. Напишіть функцію makeMessage(callback), котра отримує в якості параметра
+// callback-функцію getData() і логує повідомлення "Ви замовили ${callback()}"
+
+const car = {
+    carBrand: "Audi Q3",
+    price: 23000,
+
+    getData() {
+        return `${this.carBrand} за ${this.price} $`;
+    }
 };
 
-function checkKeyInObject(obj, key) {
-  //   return Object.keys(obj).includes(key);
-  //   return obj.hasOwnProperty(key);
-  for (const objKey in obj) {
-    return objKey === key ? true : false;
-  }
+function makeMessage(callback) {
+    console.log(`Ви замовили ${callback()}`);
 }
-console.log(checkKeyInObject((user, "qwewrfaw")));
+
+makeMessage(car.getData.bind(car));
