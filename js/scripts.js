@@ -295,3 +295,163 @@
 // }
 
 // makeMessage(car.getData.bind(car));
+
+
+// function getRandomHexColor() {
+//     return `#${Math.floor(Math.random() * 16777215)
+//       .toString(16)
+//       .padStart(6, 0)}`;
+//   }
+
+// Завдання 1
+// При натисканні на кнопку "SHOW ME", потрібно за допомогою alert
+// вивести значення, яке будемо вводити в інпут.
+
+
+// const clickMe = document.querySelector('#alertButton');
+// const textTitle = document.querySelector('#alertInput');
+
+// clickMe.addEventListener('click', onClick);
+// function onClick(eve){
+//     alert(textTitle.value);
+// }
+
+// Завдання 2
+// При натисканні на кнопку "SWAP ME" зробити так, щоб значення двох інпутів 
+// мінялися місцями. Тобто значення правого інпуту стало на місце лівого і навпаки.
+
+// const clickMe = document.querySelector('#swapButton');
+// const textTitle = document.querySelector('#leftSwapInput');
+// const textTitle2 = document.querySelector('#rightSwapInput');
+
+// clickMe.addEventListener('click', onClick);
+// function onClick(eve){
+//         const currentValue = textTitle.value;
+//         textTitle.value = textTitle2.value;
+//         textTitle2.value = currentValue;
+//     }
+
+// Завдання 3
+// При натисканні на кнопку "Приховати" потрібно введені користувачем
+// символи в інпут відображати у вигляді крапок замість звичайного
+// тексту, а також змінити назву кнопки на "Показати", при повторному
+// натисканні знову будемо відображати символи, а назва кнопки зміниться
+// на "Приховати".
+
+// const clickMe = document.querySelector('#passwordButton');
+// const passwordInput = document.querySelector('#passwordInput');
+
+// clickMe.addEventListener('click', function(e) {
+//   if (passwordInput.type === 'text') {
+//     passwordInput.type = 'password';
+//     e.currentTarget.textContent = 'Показати';
+//   } else {
+//     passwordInput.type = 'text';
+//     e.currentTarget.textContent = 'Приховати';
+//   }
+// });
+
+// Завдання 4
+// Кнопка "Зменшити" повинна зменшувати квадрат на 10 пікселів.
+// Кнопка "Збільшити" повинна збільшувати квадрат на 10 пікселів.
+
+
+// const increaseBtn = document.querySelector('#increase');
+// const decreaseBtn = document.querySelector('#decrease');
+// const boxEl = document.querySelector('#box');
+
+// increaseBtn.addEventListener('click', onBtnClick);
+// decreaseBtn.addEventListener('click', onBtnClick);
+
+// console.dir(boxEl);
+
+// function onBtnClick(evt){
+//     const {offsetWidth} = boxEl;
+//     const id = evt.currentTarget.id;
+    
+//     if(id === 'increase'){
+//         boxEl.style.width = `${offsetWidth + 10}px`;
+//         boxEl.style.height = `${offsetWidth + 10}px`;
+       
+//     }else{
+//         boxEl.style.width = `${offsetWidth - 10}px`;
+//         boxEl.style.height = `${offsetWidth - 10}px`;
+//     };
+// }
+
+// Завдання 5
+// При кліку на кнопку "Подвоїти" збільшувати значення в кожному
+// елементі списку в два рази.
+
+// const clickBtn = document.querySelector('#double');
+// const liEl = document.querySelectorAll('.listItem');
+
+// clickBtn.addEventListener('click', onClick);
+
+// function onClick(eve) {
+//     liEl.forEach((elem) => {
+//       elem.textContent = elem.textContent * 2;
+//     });
+//   }
+
+// Завдання 6
+// При кліку на кнопку "Filter" потрібно видалити з списку позначені елементи.
+
+// const form = document.querySelector('.checkboxForm');
+
+// form.addEventListener('submit', handlerRemoveEl);
+
+// function handlerRemoveEl(event){
+//     event.preventDefault();
+//     const itemWraper = document.querySelectorAll('.checkboxWrapper');
+//     const result = [...itemWraper].filter(item => item.lastElementChild.checked);
+//     result.forEach(item => item.remove());
+// }
+
+
+// Завдання 7
+// Наведено список людей. Зроби можливість фільтрації (пошуку) за ім'ям або за прізвищем.
+
+// const input = document.querySelector('.contactsFilter');
+// const list = document.querySelector('.contacts');
+// const items = [...list.children];
+
+
+// input.addEventListener('input',handlerfindItem);
+
+// function handlerfindItem(eve){
+//     const valueInput = eve.currentTarget.value;
+//     const item = items.filter((item)=>item.textContent.toLowerCase().includes(valueInput));
+//     list.innerHTML = '';
+//     list.append(...item);
+
+// }
+
+// Завдання 8
+// Наведено список людей. Зроби можливість сортування списку за ім'ям та за прізвищем.
+
+
+// const list = document.querySelector('.people');
+// const listItems = document.querySelectorAll('.person');
+// const sortByNameButton = document.querySelector('#sortByNameButton');
+// const sortByLastNameButton = document.querySelector('#sortByLastNameButton');
+
+// sortByNameButton.addEventListener('click', handlersortByName);
+// sortByLastNameButton.addEventListener('click', handlersortByLastName);
+
+// function handlersortByName(eve){
+//    const sortedItems = [...listItems].sort((a, b) => a.textContent.localeCompare(b.textContent));
+//    list.innerHTML = '';
+//    list.append(...sortedItems);
+// };
+
+// function handlersortByLastName(eve){
+//     const sortedItems = [...listItems].sort((a, b) => {
+//         const firstValue = a.textContent.split(' ')[1].toLowerCase();
+//         const secondValue = b.textContent.split(' ')[1].toLowerCase();
+//         return firstValue.localeCompare(secondValue);
+//     });
+
+//     list.innerHTML = '';
+//     list.append(...sortedItems);
+//  };
