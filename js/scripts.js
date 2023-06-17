@@ -281,17 +281,17 @@
 // 2. Напишіть функцію makeMessage(callback), котра отримує в якості параметра
 // callback-функцію getData() і логує повідомлення "Ви замовили ${callback()}"
 
-const car = {
-    carBrand: "Audi Q3",
-    price: 23000,
+// const car = {
+//     carBrand: "Audi Q3",
+//     price: 23000,
 
-    getData() {
-        return `${this.carBrand} за ${this.price} $`;
-    }
-};
+//     getData() {
+//         return `${this.carBrand} за ${this.price} $`;
+//     }
+// };
 
-function makeMessage(callback) {
-    console.log(`Ви замовили ${callback()}`);
-}
+// function makeMessage(callback) {
+//     console.log(`Ви замовили ${callback()}`);
+// }
 
-makeMessage(car.getData.bind(car));
+// makeMessage(car.getData.bind(car));
