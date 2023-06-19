@@ -455,3 +455,34 @@
 //     list.innerHTML = '';
 //     list.append(...sortedItems);
 //  };
+
+
+// const listWithId = document.querySelector('#menu');
+// listWithId.style.textTransform = 'uppercase';
+// listWithId.style.fontSize = '24px';
+// console.log(listWithId);
+
+// const listWithClass = document.querySelector('.menu');
+// console.log(listWithClass);
+
+// const menuItemsByTagName = document.querySelectorAll("li");
+// console.log(menuItemsByTagName);
+
+// const menuItemsByClass = document.querySelectorAll(".menu-item");
+// console.log(menuItemsByClass);
+
+// const firstMenuItem = document.querySelector(".menu-item");
+// firstMenuItem.style.color = 'tomato';
+// console.log(firstMenuItem);
+
+const image = document.querySelector(".image");
+
+console.log(image.attributes); // NamedNodeMap {0: class, 1: src, 2: alt, length: 3}
+
+console.log(image.hasAttribute("src")); // true
+
+console.log(image.getAttribute("alt")); // "Lake and clouds"
+
+image.setAttribute("alt", "Amazing nature");
+
+console.log(image.getAttribute("alt")); // Amazing nature
