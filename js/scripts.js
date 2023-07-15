@@ -475,14 +475,24 @@
 // firstMenuItem.style.color = 'tomato';
 // console.log(firstMenuItem);
 
-const image = document.querySelector(".image");
+// const image = document.querySelector(".image");
 
-console.log(image.attributes); // NamedNodeMap {0: class, 1: src, 2: alt, length: 3}
+// console.log(image.attributes); // NamedNodeMap {0: class, 1: src, 2: alt, length: 3}
 
-console.log(image.hasAttribute("src")); // true
+// console.log(image.hasAttribute("src")); // true
 
-console.log(image.getAttribute("alt")); // "Lake and clouds"
+// console.log(image.getAttribute("alt")); // "Lake and clouds"
 
-image.setAttribute("alt", "Amazing nature");
+// image.setAttribute("alt", "Amazing nature");
 
-console.log(image.getAttribute("alt")); // Amazing nature
+// console.log(image.getAttribute("alt")); // Amazing nature
+
+
+function add(a, b, c) {
+    const sum = a + b + c;
+    console.log(`Addition result equals ${sum}`);
+  }
+  add(15, 27, 10);
+add(10, 20, 30);
+add(5, 10, 15);
+  
