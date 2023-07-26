@@ -79,17 +79,202 @@
 // }
 // console.log(calculateAverage(1, 3, 5, "hello", 8));
 
-const user = {
-  name: "Igor",
-  car: "Mercedes",
-  carColor: "black",
-};
+// const user = {
+//   name: "Igor",
+//   car: "Mercedes",
+//   carColor: "black",
+// };
 
-function checkKeyInObject(obj, key) {
-  //   return Object.keys(obj).includes(key);
-  //   return obj.hasOwnProperty(key);
-  for (const objKey in obj) {
-    return objKey === key ? true : false;
-  }
-}
-console.log(checkKeyInObject((user, "qwewrfaw")));
+// function checkKeyInObject(obj, key) {
+//   //   return Object.keys(obj).includes(key);
+//   //   return obj.hasOwnProperty(key);
+//   for (const objKey in obj) {
+//     return objKey === key ? true : false;
+//   }
+// }
+// console.log(checkKeyInObject((user, "qwewrfaw")));
+
+// const person = { name: "Mango" };
+
+// function sayHi(age) {
+//   return `${this.name} is ${age}`;
+// }
+
+// console.log(sayHi.call(person, 18));
+// console.log(sayHi.bind(person, 18));
+
+// function slugify(title) {
+//   // Change code below this line
+//   let slug;
+//   let small;
+//   let words;
+//   words = title.toLowerCase();
+//   small = words.split(" ");
+//   slug = small.join("-");
+//   console.log(slug);
+//   return slug;
+// }
+// slugify("Arrays for begginers");
+// slugify("English for developer");
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//   // Change code below this line
+//   let concatArray = firstArray.concat(secondArray);
+
+//   const newArray = concatArray.slice(0, maxLength);
+//   console.log(newArray);
+//   return newArray;
+
+//   // Change code above this line
+// }
+// // console.log(newArray);
+// makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+// makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+// makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3);
+
+// function calculateTotal(number) {
+//   // Change code below this line
+//   let totalSum = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     totalSum += i;
+//   }
+//   console.log(totalSum);
+//   return totalSum;
+//   // Change code above this line
+// }
+// calculateTotal(7);
+// calculateTotal(18);
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+//   for (const argument of order) {
+//     total += argument;
+//   }
+
+//   console.log(total);
+//   return total;
+//   // Change code above this line
+// }
+// calculateTotalPrice([12, 85, 37, 4]);
+// calculateTotalPrice([412, 371, 94, 63, 176]);
+
+// function findLongestWord(string) {
+//   // Change code below this line
+
+//   let array = string.split(" ");
+//   let maxLengthElem = " ";
+//   for (const elem of array) {
+//     if (elem.length > maxLengthElem.length) {
+//       maxLengthElem = elem;
+//       console.log(maxLengthElem);
+//     }
+//   }
+//   return maxLengthElem;
+
+//   // Change code above this line
+// }
+
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//   }
+//   console.log(numbers);
+//   // Change code above this line
+//   return numbers;
+// }
+// createArrayOfNumbers(14, 17);
+// createArrayOfNumbers(29, 34);
+
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   let newArray = [];
+//   for (let i = 0; i <= numbers.length; i += 1) {
+//     if (numbers[i] > value) {
+//       newArray.push(numbers[i]);
+//     }
+//   }
+//   console.log(newArray);
+//   // Change code above this line
+// }
+
+// filterArray([1, 2, 3, 4, 5], 3);
+// filterArray([12, 24, 8, 41, 76], 38);
+
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+//   let newArray = [];
+//   for (const element of array1) {
+//     if (array2.includes(element)) {
+//       newArray.push(element);
+//     }
+//   }
+
+//   return newArray;
+
+//   // Change code above this line
+// }
+
+// getCommonElements([1, 2, 3], [2, 4]);
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
+
+// function getEvenNumbers(start, end) {
+//   // Change code below this line
+//   newArray = [];
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       newArray.push(i);
+//     }
+//     console.log(newArray);
+//   }
+//   return newArray;
+
+//   // Change code above this line
+// }
+
+// getEvenNumbers(3, 11);
+// getEvenNumbers(6, 12);
+
+// function includes(array, value) {
+//   // Change code below this line
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] === value) {
+//       console.log(array[i]);
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+//   // Change code above this line
+// }
+// includes([1, 2, 3, 4, 5], 3);
+// includes([1, 2, 3, 4, 5], 17);
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter");
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus");
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+
+// // Change code below this line
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// apartment.tags[apartment.tags.length - 1];
+// console.log(lastTag);
+// // Change code above this line
