@@ -664,3 +664,71 @@
 //   add(15, 27, 10);
 // add(10, 20, 30);
 // add(5, 10, 15);
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const keys = Object.values(salaries);
+//   for (let key of keys) {
+//     totalSalary += key;
+//     console.log(totalSalary);
+//   }
+//   console.log(keys);
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// for (let color of colors) {
+//   hexColors.push(color.hex);
+//   console.log(hexColors);
+//   rgbColors.push(color.rgb);
+//   console.log(rgbColors);
+// }
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const propValues = [];
+//   for (const product of products) {
+//     if (product.hasOwnProperty(propName)) {
+//       propValues.push(product[propName]);
+//     }
+//     console.log(propValues);
+//   }
+
+//   return propValues;
+
+//   // Change code above this line
+// }
+
+// getAllPropValues("name");
+// getAllPropValues("quantity");
+// getAllPropValues("category");
+
+// function multiply(firstNumber, secondNumber, ...otherArgs) {
+//   console.log(firstNumber); // Значення першого аргументу
+//   console.log(secondNumber); // Значення другого аргументу
+//   console.log(otherArgs); // Масив інших аргументів
+// }
+
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
