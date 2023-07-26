@@ -727,8 +727,23 @@
 //   console.log(firstNumber); // Значення першого аргументу
 //   console.log(secondNumber); // Значення другого аргументу
 //   console.log(otherArgs); // Масив інших аргументів
+  
 // }
+
 
 // multiply(1, 2);
 // multiply(1, 2, 3);
 // multiply(1, 2, 3, 4);
+
+
+// const book = {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["historical prose", "adventure"],
+//     isPublic: true,
+//     rating: 8.38,
+//   };
+  
+//   const accessType = book.isPublic ? "публічному" : "закритому";
+//   const message = `Книга ${book.title} автора ${book.author} з рейтингом ${book.rating} знаходиться в ${accessType} доступі.`;
+//   console.log(message);
