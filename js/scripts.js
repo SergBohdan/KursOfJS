@@ -770,3 +770,53 @@
 
 // console.log(hexColors);
 // console.log(rgbColors);
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+
+//   let dataObj = {
+//     category,
+//     priority,
+//     ...data,
+//     completed,
+//   };
+//   console.log(dataObj);
+//   // Change code above this line
+// }
+
+// makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" });
+
+// Change code below this line
+
+// function add(...args) {
+//   console.log(args);
+//   let total = 0;
+//   for (let arg of args) {
+//     total += arg;
+//     console.log(total);
+//   }
+//   return total;
+//   // Change code above this line
+// }
+
+// add(74, 11, 62, 46, 12, 36);
+
+// Change code below this line
+// function addOverNum(...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     console.log(arg);
+//     if (arg[0] > arg) {
+//       total += arg;
+//       console.log(total);
+//     }
+//   }
+
+//   return total;
+//   // Change code above this line
+// }
+// addOverNum(10, 12, 4, 11, 48, 10, 8);
