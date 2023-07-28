@@ -727,14 +727,12 @@
 //   console.log(firstNumber); // Значення першого аргументу
 //   console.log(secondNumber); // Значення другого аргументу
 //   console.log(otherArgs); // Масив інших аргументів
-  
-// }
 
+// }
 
 // multiply(1, 2);
 // multiply(1, 2, 3);
 // multiply(1, 2, 3, 4);
-
 
 // const book = {
 //     title: "The Last Kingdom",
@@ -743,7 +741,32 @@
 //     isPublic: true,
 //     rating: 8.38,
 //   };
-  
+
 //   const accessType = book.isPublic ? "публічному" : "закритому";
 //   const message = `Книга ${book.title} автора ${book.author} з рейтингом ${book.rating} знаходиться в ${accessType} доступі.`;
 //   console.log(message);
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (const color of colors) {
+//   const { hex, rgb } = color;
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+
+// for (const { hex, rgb } of colors) {
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
