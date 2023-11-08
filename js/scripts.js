@@ -821,17 +821,16 @@
 // }
 // addOverNum(10, 12, 4, 11, 48, 10, 8);
 
-
 // function registerGuest(name, callback) {
 //     console.log(`Реєструємо гостя ${name}.`);
 //     callback(name);
 //   }
-  
+
 //   // Передаємо інлайн функцію greet у якості колбека
 //   registerGuest("Манго", function greet(name) {
 //     console.log(`Ласкаво просимо ${name}.`);
 //   });
-  
+
 //   // Передаємо інлайн функцію notify у якості колбека
 //   registerGuest("Полі", function notify(name) {
 //     console.log(`Шановний(а) ${name}, ваш номер буде готовий за 30 хвилин.`);
@@ -891,9 +890,6 @@
 //    getSeparateCategories,
 //    getBookInfo
 // } from './api.js';
-
-
-
 
 // const categoriesAll = "https://books-backend.p.goit.global/books/category-list";
 
@@ -964,3 +960,44 @@
 // getTopBooks();
 // getSeparateCategories('Combined Print and E-book Fiction');
 // getBookInfo('some_book_id');
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//   // Change code below this line
+//   const totalPrice = message.split(" ").length * pricePerWord;
+//   console.log(totalPrice);
+//   // Change code above this line
+// }
+
+// calculateEngravingPrice("JavaScript is in my blood", 10);
+// calculateEngravingPrice("JavaScript is in my blood", 20);
+
+// function slugify(title) {
+//   // Change code below this line
+
+//   let lowerTitle = title.toLowerCase();
+//   let arrayTitle = lowerTitle.split(" ");
+//   let slugTitle = arrayTitle.join("-");
+
+//   //   console.log(slugTitle);
+//   return slugTitle;
+//   // Change code above this line
+// }
+
+// slugify("Arrays for begginers");
+// slugify("English for developer");
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//   // Change code below this line
+//   let concatArray = firstArray.concat(secondArray);
+//   console.log(concatArray);
+//   if (concatArray.length > maxLength) {
+//     return concatArray.slice(0, maxLength);
+//   } else {
+//     return concatArray;
+//   }
+
+//   // Change code above this line
+// }
+
+// makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+// makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
