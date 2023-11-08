@@ -1001,3 +1001,67 @@
 
 // makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
 // makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+
+// function calculateTotal(number) {
+//   // Change code below this line
+//   let totalCount = 0;
+
+//   for (let i = 0; i <= number; i += 1) {
+//     console.log(i);
+//     totalCount += i;
+//     console.log(totalCount);
+//   }
+//   return totalSum;
+//   // Change code above this line
+// }
+
+// calculateTotal(18);
+
+// function findLongestWord(string) {
+//   // Change code below this line
+//   let longerWord = " ";
+//   let words = string.split(" ");
+//   console.log(words);
+//   for (let word of words) {
+//     console.log(longerWord);
+//     if (word.length > longerWord.length) {
+//       longerWord = word;
+//     }
+//   }
+//   return longerWord;
+// }
+
+// // Change code above this line
+
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+//   for (let i = min; i <= max; i += 1) {
+//     console.log(i);
+//     numbers.push(i);
+//     console.log(numbers);
+//   }
+//   // Change code above this line
+//   return numbers;
+// }
+
+// createArrayOfNumbers(14, 17);
+// createArrayOfNumbers(29, 34);
+
+function filterArray(numbers, value) {
+  // Change code below this line
+  let newArray = [];
+  for (let number of numbers) {
+    if (number > value) {
+      newArray.push(number);
+    }
+  }
+  console.log(newArray);
+  return newArray;
+
+  // Change code above this line
+}
+filterArray([1, 2, 3, 4, 5], 3);
+filterArray([12, 24, 8, 41, 76], 38);
