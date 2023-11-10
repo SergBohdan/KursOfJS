@@ -1050,18 +1050,55 @@
 // createArrayOfNumbers(14, 17);
 // createArrayOfNumbers(29, 34);
 
-function filterArray(numbers, value) {
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   let newArray = [];
+//   for (let number of numbers) {
+//     if (number > value) {
+//       newArray.push(number);
+//     }
+//   }
+//   console.log(newArray);
+//   return newArray;
+
+//   // Change code above this line
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+// filterArray([12, 24, 8, 41, 76], 38);
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const keys = Object.values(salaries);
+//   console.log(keys);
+//   for (const key of keys) {
+//     totalSalary += key;
+//   }
+//   console.log(totalSalary);
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getProductPrice(productName) {
   // Change code below this line
-  let newArray = [];
-  for (let number of numbers) {
-    if (number > value) {
-      newArray.push(number);
+  for (const product of products) {
+    // console.log(product.name);
+    if (product.name === productName) {
+      return product.price;
     }
   }
-  console.log(newArray);
-  return newArray;
-
+  return null;
   // Change code above this line
 }
-filterArray([1, 2, 3, 4, 5], 3);
-filterArray([12, 24, 8, 41, 76], 38);
+getProductPrice("Radar");
+getProductPrice("Grip");
+getProductPrice("Engine");
