@@ -1081,24 +1081,111 @@
 
 // countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
 
-function getProductPrice(productName) {
+// function getProductPrice(productName) {
+//   // Change code below this line
+//   for (const product of products) {
+//     // console.log(product.name);
+//     if (product.name === productName) {
+//       return product.price;
+//     }
+//   }
+//   return null;
+//   // Change code above this line
+// }
+// getProductPrice("Radar");
+// getProductPrice("Grip");
+// getProductPrice("Engine");
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+//   for (const product of products) {
+//     if (productName === product.name) {
+//       return product.price * product.quantity;
+//     }
+//   }
+//   // Change code above this line
+// }
+// calculateTotalPrice("Blaster");
+// calculateTotalPrice("Radar");
+
+// const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+// console.log(finalSettings);
+
+// function add(...args) {
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   console.log(total);
+// }
+
+// add(74, 11, 62, 46, 12, 36);
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
   // Change code below this line
-  for (const product of products) {
-    // console.log(product.name);
-    if (product.name === productName) {
-      return product.price;
+  getPotions() {
+    return this.potions;
+  },
+  // додавання зілля newPotion (вже об'єкт) в масив, але тільки, якщо такого зілля ще немає
+  // якщо зілля вже є, повертається рядок
+  addPotion(newPotion) {
+    const potionNames = this.potions.map((potion) => potion.name);
+    console.log(potionNames);
+    if (potionNames.includes(newPotion.name)) {
+      return `Error! Potion ${newPotion.name} is already in your inventory!`;
     }
-  }
-  return null;
-  // Change code above this line
-}
-getProductPrice("Radar");
-getProductPrice("Grip");
-getProductPrice("Engine");
+
+    this.potions.push(newPotion);
+  },
+  // видалення об'єкта зілля з ім'ям potionName з масиву
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+    if (potionIndex !== -1) {
+      this.potions.splice(potionIndex, 1);
+    }
+
+    if (!potionIndex) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potion = this.potions.find((potion) => potion.name === oldName);
+
+    if (!potion) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    potion.name = newName;
+  },
+};
+atTheOldToad.getPotions();
+atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+atTheOldToad.addPotion({ name: "Power potion", price: 270 });
+atTheOldToad.addPotion({ name: "Dragon breath", price: 700 });
