@@ -1141,51 +1141,102 @@
 
 // add(74, 11, 62, 46, 12, 36);
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   // додавання зілля newPotion (вже об'єкт) в масив, але тільки, якщо такого зілля ще немає
+//   // якщо зілля вже є, повертається рядок
+//   addPotion(newPotion) {
+//     const potionNames = this.potions.map((potion) => potion.name);
+//     console.log(potionNames);
+//     if (potionNames.includes(newPotion.name)) {
+//       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+//   // видалення об'єкта зілля з ім'ям potionName з масиву
+//   removePotion(potionName) {
+//     const potionIndex = this.potions.indexOf(potionName);
+//     if (potionIndex !== -1) {
+//       this.potions.splice(potionIndex, 1);
+//     }
+
+//     if (!potionIndex) {
+//       return `Potion ${potionName} is not in inventory!`;
+//     }
+
+//     this.potions.splice(potionIndex, 1);
+//   },
+//   updatePotionName(oldName, newName) {
+//     const potion = this.potions.find((potion) => potion.name === oldName);
+
+//     if (!potion) {
+//       return `Potion ${oldName} is not in inventory!`;
+//     }
+
+//     potion.name = newName;
+//   },
+// };
+// atTheOldToad.getPotions();
+// atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+// atTheOldToad.addPotion({ name: "Power potion", price: 270 });
+// atTheOldToad.addPotion({ name: "Dragon breath", price: 700 });
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const getTags = (tweets) =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+
+//     return allTags;
+//   }, []);
+
+// const tags = getTags(tweets);
+// console.log(tags);
+
+// // Винесемо callback-функцію окремо, а в reducе передамо посилання на неї.
+// // Це стандартна практика, якщо callback-функція досить велика.
+
+// // Якщо в об'єкті-акумуляторі acc відсутня своя властивість з ключем tag,
+// // то створюємо її і записуємо їй значення 0.
+// // В іншому випадку збільшуємо значення на 1.
+// const getTagStats = (acc, tag) => {
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
+//   }
+
+//   acc[tag] += 1;
+
+//   return acc;
+// };
+
+// // Початкове значення акумулятора - це порожній об'єкт {}
+// const countTags = (tags) => tags.reduce(getTagStats, {});
+
+// const tagCount = countTags(tags);
+// console.log(tagCount);
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
   // Change code below this line
-  getPotions() {
-    return this.potions;
-  },
-  // додавання зілля newPotion (вже об'єкт) в масив, але тільки, якщо такого зілля ще немає
-  // якщо зілля вже є, повертається рядок
-  addPotion(newPotion) {
-    const potionNames = this.potions.map((potion) => potion.name);
-    console.log(potionNames);
-    if (potionNames.includes(newPotion.name)) {
-      return `Error! Potion ${newPotion.name} is already in your inventory!`;
-    }
+  orderedItems.forEach(function (orderedItem, index) {
+    totalPrice += orderedItem;
+  });
 
-    this.potions.push(newPotion);
-  },
-  // видалення об'єкта зілля з ім'ям potionName з масиву
-  removePotion(potionName) {
-    const potionIndex = this.potions.indexOf(potionName);
-    if (potionIndex !== -1) {
-      this.potions.splice(potionIndex, 1);
-    }
-
-    if (!potionIndex) {
-      return `Potion ${potionName} is not in inventory!`;
-    }
-
-    this.potions.splice(potionIndex, 1);
-  },
-  updatePotionName(oldName, newName) {
-    const potion = this.potions.find((potion) => potion.name === oldName);
-
-    if (!potion) {
-      return `Potion ${oldName} is not in inventory!`;
-    }
-
-    potion.name = newName;
-  },
-};
-atTheOldToad.getPotions();
-atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
-atTheOldToad.addPotion({ name: "Power potion", price: 270 });
-atTheOldToad.addPotion({ name: "Dragon breath", price: 700 });
+  // Change code above this line
+  return totalPrice;
+}
