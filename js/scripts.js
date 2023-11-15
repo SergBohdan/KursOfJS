@@ -821,17 +821,16 @@
 // }
 // addOverNum(10, 12, 4, 11, 48, 10, 8);
 
-
 // function registerGuest(name, callback) {
 //     console.log(`Реєструємо гостя ${name}.`);
 //     callback(name);
 //   }
-  
+
 //   // Передаємо інлайн функцію greet у якості колбека
 //   registerGuest("Манго", function greet(name) {
 //     console.log(`Ласкаво просимо ${name}.`);
 //   });
-  
+
 //   // Передаємо інлайн функцію notify у якості колбека
 //   registerGuest("Полі", function notify(name) {
 //     console.log(`Шановний(а) ${name}, ваш номер буде готовий за 30 хвилин.`);
@@ -891,9 +890,6 @@
 //    getSeparateCategories,
 //    getBookInfo
 // } from './api.js';
-
-
-
 
 // const categoriesAll = "https://books-backend.p.goit.global/books/category-list";
 
@@ -964,3 +960,19 @@
 // getTopBooks();
 // getSeparateCategories('Combined Print and E-book Fiction');
 // getBookInfo('some_book_id');
+
+function formatMessage(message, maxLength) {
+  let result;
+  // Change code below this line
+  if(message.length <= maxLength){
+    result = message;
+  }else {
+    result = message.slice(0, maxLength)
+    result += '...';
+  }
+
+getSubstring("Hello world", 3);
+getSubstring("Hello world", 6);
+getSubstring("Hello world", 8);
+getSubstring("Hello world", 11);
+getSubstring("Hello world", 0);
