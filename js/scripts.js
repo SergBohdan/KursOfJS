@@ -1230,13 +1230,53 @@
 // const tagCount = countTags(tags);
 // console.log(tagCount);
 
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
-  // Change code below this line
-  orderedItems.forEach(function (orderedItem, index) {
-    totalPrice += orderedItem;
-  });
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+//   orderedItems.forEach(function (orderedItem, index) {
+//     totalPrice += orderedItem;
+//   });
 
-  // Change code above this line
-  return totalPrice;
-}
+//   // Change code above this line
+//   return totalPrice;
+// }
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+
+//   firstArray.forEach(function (item) {
+//     if (secondArray.includes(item)) {
+//       commonElements.push(item);
+//     }
+//     console.log(commonElements);
+//   });
+
+//   return commonElements;
+//   // Change code above this line
+// }
+
+// getCommonElements([1, 2, 3], [2, 4]);
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   let newArray = [];
+//   numbers.forEach((number) => {
+//     if (number % 2 === 0) {
+//       newArray.push(number + value);
+//     } else {
+//       newArray.push(number);
+//     }
+//     console.log(newArray);
+//     return newArray;
+//   });
+//   console.log(numbers);
+//   // Change code above this line
+// }
+// changeEven([1, 2, 3, 4, 5], 10);
+
+const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// Change code below this line
+const planetsLengths = planets.map((planet) => planet.length);
+console.log(planetsLengths);
