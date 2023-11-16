@@ -961,18 +961,18 @@
 // getSeparateCategories('Combined Print and E-book Fiction');
 // getBookInfo('some_book_id');
 
-function formatMessage(message, maxLength) {
-  let result;
-  // Change code below this line
-  if(message.length <= maxLength){
-    result = message;
-  }else {
-    result = message.slice(0, maxLength)
-    result += '...';
-  }
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//   if(message.length <= maxLength){
+//     result = message;
+//   }else {
+//     result = message.slice(0, maxLength)
+//     result += '...';
+//   }
 
-getSubstring("Hello world", 3);
-getSubstring("Hello world", 6);
-getSubstring("Hello world", 8);
-getSubstring("Hello world", 11);
-getSubstring("Hello world", 0);
+// getSubstring("Hello world", 3);
+// getSubstring("Hello world", 6);
+// getSubstring("Hello world", 8);
+// getSubstring("Hello world", 11);
+// getSubstring("Hello world", 0);
